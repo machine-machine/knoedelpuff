@@ -6,20 +6,15 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-forest-dark"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background — green textured with forest overlay */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-forest-dark via-forest to-forest-dark" />
-        {/* Subtle texture pattern */}
-        <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle, white 1px, transparent 1px)",
-            backgroundSize: "24px 24px",
-          }}
-        />
+      {/* Background — food photo with warm green overlay (v1 style) */}
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/images/food-dark-plate.jpg')",
+        }}
+      >
+        <div className="hero-gradient absolute inset-0" />
       </div>
 
       {/* Floating decorative elements */}
