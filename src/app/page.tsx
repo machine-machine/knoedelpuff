@@ -1,10 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Produkte from "@/components/Produkte";
-import Catering from "@/components/Catering";
+import WerWirSind from "@/components/WerWirSind";
+import Festivals from "@/components/Festivals";
+import Weihnachtsmaerkte from "@/components/Weihnachtsmaerkte";
 import Bestellen from "@/components/Bestellen";
-import Standorte from "@/components/Standorte";
-import UeberUns from "@/components/UeberUns";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -14,10 +14,10 @@ export default function Home() {
       <main>
         <Hero />
         <Produkte />
-        <Catering />
+        <WerWirSind />
+        <Festivals />
+        <Weihnachtsmaerkte />
         <Bestellen />
-        <Standorte />
-        <UeberUns />
       </main>
       <Footer />
     </>

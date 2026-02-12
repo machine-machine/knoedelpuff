@@ -2,25 +2,27 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Knödelpuff — Handgemachte Spinatknödel aus Österreich",
+  title: "Spinat Knödel — Handgemachte Spinatknödel in Zürich",
   description:
-    "Knödelpuff bringt dir die besten handgemachten Spinatknödel Österreichs. Frisch zubereitet für Weihnachtsmärkte, Feste und Catering für bis zu 200 Personen.",
+    "Knödelpuff bringt dir die besten handgemachten Spinatknödel. Frisch zubereitet für Weihnachtsmärkte, Festivals und Catering für bis zu 200 Personen. Zwingliplatz / Großmünsterplatz, Zürich.",
   keywords: [
     "Spinatknödel",
     "Knödel",
-    "Österreich",
+    "Zürich",
     "handgemacht",
     "Catering",
     "Weihnachtsmarkt",
     "Knödelpuff",
-    "österreichische Küche",
+    "Spinat Knödel",
+    "Festival",
+    "Street Food",
   ],
   openGraph: {
-    title: "Knödelpuff — Handgemachte Spinatknödel aus Österreich",
+    title: "Spinat Knödel — Handgemachte Spinatknödel in Zürich",
     description:
-      "Frisch zubereitete Spinatknödel für Märkte, Feste und Events. Catering für bis zu 200 Personen in nur 2 Stunden!",
+      "Frisch zubereitete Spinatknödel für Märkte, Festivals und Events. Catering für bis zu 200 Personen in nur 2 Stunden!",
     type: "website",
-    locale: "de_AT",
+    locale: "de_CH",
     siteName: "Knödelpuff",
   },
   robots: {

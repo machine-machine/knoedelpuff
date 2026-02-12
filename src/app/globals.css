@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  /* Base warm palette */
   --color-forest: #2D5016;
   --color-forest-light: #4A7C28;
   --color-forest-dark: #1a3010;
@@ -13,6 +14,26 @@
   --color-sage: #A8C686;
   --color-spinach: #3D7A1E;
   --color-gold: #D4A843;
+
+  /* Summer festival palette */
+  --color-summer-bg: #FFF9E6;
+  --color-summer-warm: #FF8C38;
+  --color-summer-yellow: #FFD036;
+  --color-summer-green: #5CB338;
+  --color-summer-amber: #F5A623;
+  --color-summer-peach: #FFCBA4;
+  --color-summer-sky: #87CEEB;
+
+  /* Christmas palette */
+  --color-xmas-bg: #1A0F0A;
+  --color-xmas-red: #8B1A1A;
+  --color-xmas-red-light: #C0392B;
+  --color-xmas-gold: #D4A843;
+  --color-xmas-amber: #C8842A;
+  --color-xmas-green: #1B4332;
+  --color-xmas-green-light: #2D6A4F;
+  --color-xmas-cream: #FFF8E7;
+  --color-xmas-warm: #3D2415;
 
   --font-heading: "Playfair Display", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
@@ -96,6 +117,23 @@
   50% { transform: translateY(-10px); }
 }
 
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@keyframes snowfall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
 }
@@ -120,11 +158,17 @@
   animation: float 3s ease-in-out infinite;
 }
 
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
 .delay-100 { animation-delay: 100ms; }
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }
 .delay-400 { animation-delay: 400ms; }
 .delay-500 { animation-delay: 500ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-1000 { animation-delay: 1000ms; }
 
 /* Intersection Observer animations */
 .reveal {
@@ -170,10 +214,51 @@
   );
 }
 
+/* Summer gradient */
+.summer-gradient {
+  background: linear-gradient(
+    180deg,
+    #FFF8E7 0%,
+    #FFF9E6 5%,
+    #FFFBF0 50%,
+    #FFF9E6 95%,
+    #FFF8E7 100%
+  );
+}
+
+/* Christmas gradient */
+.xmas-gradient {
+  background: linear-gradient(
+    180deg,
+    #FFF8E7 0%,
+    #2D1810 8%,
+    #1A0F0A 20%,
+    #1A0F0A 80%,
+    #2D1810 92%,
+    #FFF8E7 100%
+  );
+}
+
 /* Texture overlays */
 .texture-dots {
   background-image: radial-gradient(circle, rgba(45, 80, 22, 0.05) 1px, transparent 1px);
   background-size: 20px 20px;
+}
+
+/* Snowflake overlay */
+.snowflake-overlay {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.snowflake {
+  position: absolute;
+  color: white;
+  opacity: 0.15;
+  animation: snowfall linear infinite;
+  font-size: 1rem;
 }
 
 /* Custom scrollbar */

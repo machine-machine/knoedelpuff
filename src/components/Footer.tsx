@@ -8,17 +8,17 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <span className="text-3xl">🥟</span>
               <span className="text-2xl font-bold text-cream font-[family-name:var(--font-heading)]">
-                Knödelpuff
+                Spinat Knödel
               </span>
             </div>
             <p className="text-sm leading-relaxed mb-4">
-              Handgemachte Spinatknödel aus Österreich. Mit Liebe, Tradition und
-              den besten Zutaten aus der Region.
+              Handgemachte Spinatknödel in Zürich. Mit Liebe, Tradition und
+              den besten Zutaten — direkt am Zwingliplatz / Großmünsterplatz.
             </p>
             {/* Social */}
             <div className="flex gap-3">
               <a
-                href="https://instagram.com/knuelhof"
+                href="https://instagram.com/knoedelpuff"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 hover:bg-gold rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
@@ -40,43 +40,28 @@ export default function Footer() {
             <h4 className="text-cream font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
-                  href="#produkte"
-                  className="hover:text-gold transition-colors"
-                >
+                <a href="#produkte" className="hover:text-gold transition-colors">
                   Produkte
                 </a>
               </li>
               <li>
-                <a
-                  href="#catering"
-                  className="hover:text-gold transition-colors"
-                >
-                  Catering
+                <a href="#wer-wir-sind" className="hover:text-gold transition-colors">
+                  Wer wir sind
                 </a>
               </li>
               <li>
-                <a
-                  href="#bestellen"
-                  className="hover:text-gold transition-colors"
-                >
+                <a href="#festivals" className="hover:text-gold transition-colors">
+                  Festivals
+                </a>
+              </li>
+              <li>
+                <a href="#weihnachtsmaerkte" className="hover:text-gold transition-colors">
+                  Weihnachtsmärkte
+                </a>
+              </li>
+              <li>
+                <a href="#bestellen" className="hover:text-gold transition-colors">
                   Bestellen
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#standorte"
-                  className="hover:text-gold transition-colors"
-                >
-                  Standorte
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#ueber-uns"
-                  className="hover:text-gold transition-colors"
-                >
-                  Über uns
                 </a>
               </li>
             </ul>
@@ -89,24 +74,26 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <span>📧</span>
                 <a
-                  href="mailto:hallo@knoedelpuff.at"
+                  href="mailto:hallo@knoedelpuff.ch"
                   className="hover:text-gold transition-colors"
                 >
-                  hallo@knoedelpuff.at
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <span>📞</span>
-                <a
-                  href="tel:+4312345678"
-                  className="hover:text-gold transition-colors"
-                >
-                  +43 1 234 5678
+                  hallo@knoedelpuff.ch
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <span>📍</span>
-                <span>Steiermark, Österreich</span>
+                <span>Zwingliplatz / Großmünsterplatz, Zürich</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span>📸</span>
+                <a
+                  href="https://instagram.com/knoedelpuff"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gold transition-colors"
+                >
+                  @knoedelpuff
+                </a>
               </li>
             </ul>
           </div>
@@ -137,11 +124,11 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-cream/40">
-            © 2025 Knödelpuff. Alle Rechte vorbehalten.
+            © 2026 Knödelpuff. Alle Rechte vorbehalten.
           </p>
           <p className="text-sm text-cream/40 flex items-center gap-1">
             Gemacht mit <span className="text-red-400">❤️</span> und{" "}
-            <span>🥟</span> in Österreich
+            <span>🥟</span> in Zürich
           </p>
         </div>
       </div>

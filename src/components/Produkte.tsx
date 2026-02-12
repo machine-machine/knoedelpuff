@@ -4,17 +4,15 @@ import Image from "next/image";
 import { useReveal } from "@/hooks/useReveal";
 
 const ingredients = [
-  { icon: "🌿", name: "Frischer Blattspinat", desc: "Direkt vom Feld" },
-  { icon: "🧀", name: "Bergkäse", desc: "Aus den Alpen" },
+  { icon: "🌿", name: "Frischer Blattspinat", desc: "Erntefrisch & knackig" },
+  { icon: "🧀", name: "Bergkäse", desc: "Cremig aus den Alpen" },
   { icon: "🥚", name: "Freilandeier", desc: "Von glücklichen Hühnern" },
-  { icon: "🧈", name: "Alpenbutter", desc: "Cremig & vollmundig" },
-  { icon: "🧅", name: "Frische Zwiebeln", desc: "Goldbraun geröstet" },
+  { icon: "🧈", name: "Alpenbutter", desc: "Goldbraun geschmolzen" },
+  { icon: "🧅", name: "Frische Zwiebeln", desc: "Liebevoll angedünstet" },
   { icon: "🧂", name: "Muskatnuss & Kräuter", desc: "Fein abgeschmeckt" },
 ];
 
 export default function Produkte() {
-  const ref = useReveal();
-
   return (
     <section
       id="produkte"
@@ -22,7 +20,7 @@ export default function Produkte() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div ref={ref} className="reveal text-center mb-16">
+        <div ref={useReveal()} className="reveal text-center mb-16">
           <p className="text-forest-light font-medium tracking-widest uppercase text-sm mb-3">
             Unsere Spezialität
           </p>
@@ -35,14 +33,14 @@ export default function Produkte() {
           </p>
         </div>
 
-        {/* Product Showcase */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
+        {/* Product Showcase — Dark Plate Image */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-24">
           {/* Image */}
           <div className="reveal-left relative" ref={useReveal()}>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
               <Image
-                src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&q=80"
-                alt="Frisch zubereitete Spinatknödel auf einem rustikalen Holzteller, garniert mit Parmesan und gebräunter Butter"
+                src="/images/food-dark-plate.jpg"
+                alt="Spinatknödel auf dunklem Teller mit Parmesan und gebräunter Butter"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -64,7 +62,7 @@ export default function Produkte() {
             </h3>
             <p className="text-warm-brown/80 text-lg leading-relaxed mb-6">
               Unsere Spinatknödel sind keine gewöhnlichen Knödel. Wir verwenden nur die
-              frischesten Zutaten aus der Region — erntefrischen Blattspinat,
+              frischesten Zutaten — erntefrischen Blattspinat,
               cremigen Bergkäse aus den Alpen und Eier von freilaufenden Hühnern.
             </p>
             <p className="text-warm-brown/80 text-lg leading-relaxed mb-8">
@@ -87,6 +85,49 @@ export default function Produkte() {
                 <span className="block text-3xl font-bold text-forest">∞</span>
                 <span className="text-sm text-warm-brown/60">Liebe</span>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Second Image — Tablecloth (authentic/traditional feel) */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-24">
+          {/* Text — left this time */}
+          <div className="reveal-left order-2 lg:order-1" ref={useReveal()}>
+            <h3 className="text-3xl sm:text-4xl font-bold text-forest font-[family-name:var(--font-heading)] mb-6">
+              Wie bei Oma am Tisch
+            </h3>
+            <p className="text-warm-brown/80 text-lg leading-relaxed mb-6">
+              Unsere Knödel erinnern an Sonntage in der Familienküche — dampfend
+              auf dem kariert gedeckten Tisch, mit zerlassener Butter und
+              frischem Schnittlauch. Einfach, ehrlich, köstlich.
+            </p>
+            <p className="text-warm-brown/80 text-lg leading-relaxed mb-6">
+              Ob als Hauptgericht mit Salat, als Beilage zum Braten oder solo
+              mit Parmesan — Spinatknödel passen immer und machen jeden Tisch
+              zum Festmahl.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {["Vegetarisch", "Frisch zubereitet", "Ohne Zusatzstoffe"].map((tag) => (
+                <span
+                  key={tag}
+                  className="bg-forest/10 text-forest px-4 py-2 rounded-full text-sm font-medium"
+                >
+                  ✓ {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Image — right */}
+          <div className="reveal-right relative order-1 lg:order-2" ref={useReveal()}>
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
+              <Image
+                src="/images/food-tablecloth.jpg"
+                alt="Spinatknödel auf weißem Teller mit karierter Tischdecke — traditionell serviert"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>

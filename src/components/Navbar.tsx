@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const navLinks = [
   { href: "#produkte", label: "Produkte" },
-  { href: "#catering", label: "Catering" },
+  { href: "#wer-wir-sind", label: "Wer wir sind" },
+  { href: "#festivals", label: "Festivals" },
+  { href: "#weihnachtsmaerkte", label: "Weihnachtsmärkte" },
   { href: "#bestellen", label: "Bestellen" },
-  { href: "#standorte", label: "Wo findest du uns" },
-  { href: "#ueber-uns", label: "Über uns" },
 ];
 
 export default function Navbar() {
@@ -26,8 +27,8 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-forest/95 backdrop-blur-md shadow-lg py-3"
-          : "bg-transparent py-5"
+          ? "bg-forest/95 backdrop-blur-md shadow-lg py-2"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,23 +36,29 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#"
-            className="flex items-center gap-2 group"
+            className="flex items-center gap-3 group"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            <span className="text-3xl" role="img" aria-label="Knödel">
-              🥟
-            </span>
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-gold/50 group-hover:border-gold transition-colors duration-300">
+              <Image
+                src="/images/logo-green.jpg"
+                alt="Spinat Knödel Logo"
+                fill
+                className="object-cover"
+                sizes="48px"
+              />
+            </div>
             <span
-              className={`text-2xl font-bold font-[family-name:var(--font-heading)] transition-colors duration-300 ${
+              className={`text-xl sm:text-2xl font-bold font-[family-name:var(--font-heading)] transition-colors duration-300 ${
                 isScrolled ? "text-cream" : "text-white"
               } group-hover:text-gold`}
             >
-              Knödelpuff
+              Spinat Knödel
             </span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -73,7 +80,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white p-2"
+            className="lg:hidden text-white p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Menü öffnen"
           >
@@ -104,8 +111,8 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-            isMobileMenuOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
+          className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${
+            isMobileMenuOpen ? "max-h-[500px] opacity-100 mt-4" : "max-h-0 opacity-0"
           }`}
         >
           <div className="bg-forest/95 backdrop-blur-md rounded-2xl p-6 space-y-4">
